@@ -2,91 +2,18 @@ import React from "react";
 import ImageTextSection from "../../../components/imageL_TextR";
 import { useState, useRef, useEffect } from "react";
 import TriangleBullet from "../../../components/Home/TriangleBullet";
-import { FaCheckCircle, FaArrowRight, FaRegStar } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Button from "../../../components/Button";
 import Accordion from "../../../components/Home/Accordion";
 import AnimatedSection from "../../../components/services/TextL_IconEffectR";
 import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
 import RotatingStarL_ImgR from "../../../components/services/RotatingStarL_ImgR";
+import ServicesSection from "../../../components/services/TextCenter_animatedLED";
+import TextCenter_animatedCircle from "../../../components/services/TextCentere_animatedCircle";
 const PhpWebDevelopment = () => {
   const foldername = "/PHP";
-  //PHP Web Development
-  const imgRef = useRef(null);
-  const textRef = useRef(null);
-  const [imgVisible, setImgVisible] = useState(false);
-  const [textVisible, setTextVisible] = useState(false);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef.current) imgObserver.observe(imgRef.current);
-    if (textRef.current) textObserver.observe(textRef.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  const features = [
-    "82.6% Of All Websites Used PHP As Their Programming Language",
-    "PHP Is Used By More Than 40 Million Websites",
-    "Our Panel Of Web Developers Work With Laravel And codeigniter",
-    "We Have More Than 11 Years Of Experience In PHP",
-  ];
   // codeigniter
-  const imgRef2 = useRef(null);
-  const textRef2 = useRef(null);
-  const [imgVisible2, setImgVisible2] = useState(false);
-  const [textVisible2, setTextVisible2] = useState(false);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible2(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible2(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef2.current) imgObserver.observe(imgRef2.current);
-    if (textRef2.current) textObserver.observe(textRef2.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
   const steps = [
     {
       text: "EFFICIENT TEAMWORK",
@@ -159,39 +86,6 @@ const PhpWebDevelopment = () => {
     },
   ];
   // new technologies
-  const imgRef4 = useRef(null);
-  const textRef4 = useRef(null);
-  const [imgVisible4, setImgVisible4] = useState(false);
-  const [textVisible4, setTextVisible4] = useState(false);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible4(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible4(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef4.current) imgObserver.observe(imgRef4.current);
-    if (textRef4.current) textObserver.observe(textRef4.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
   const services = [
     {
       img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/PHP-logo.svg.webp",
@@ -361,54 +255,16 @@ const PhpWebDevelopment = () => {
         image={`${foldername}/php-dev.webp`}
       />
       {/* PHP Development */}
-      <section className="w-full bg-center bg-[url('PHP/s2-bg-img-1.webp')] bg-cover bg-no-repeat py-10 sm:py-14">
-        <div className="container mx-auto px-4 text-center text-white">
-          {/* Subtitle */}
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="uppercase flex gap-3 text-sm sm:text-[17px] font-black tracking-wider">
-              <TriangleBullet /> <span>Development</span>
-            </div>
-          </div>
-
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-extrabold leading-tight mb-4">
-            PHP Web Development
-          </h2>
-
-          {/* Description */}
-          <p className="max-w-4xl mx-auto text-gray-200 mb-12 text-base sm:text-lg md:text-[18px] font-normal leading-relaxed px-2">
-            Geektheory is a leading PHP web development company in Chennai,
-            India. PHP is widely used for dynamic web development, powering over
-            80% of websites. Our expert developers cater to both businesses and
-            startups.
-          </p>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-            {dev.map((feature, index) => (
-              <div
-                key={index}
-                data-aos={feature.animation} // AOS animation type
-                className="text-center"
-              >
-                <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white transform transition duration-300 ease-out hover:scale-105 hover:rotate-6 hover:shadow-xl">
-                  <img
-                    src={feature.img}
-                    alt={feature.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h5 className="text-lg sm:text-xl font-bold mb-3">
-                  {feature.title}
-                </h5>
-                <p className="text-gray-300 text-sm sm:text-base max-w-xs mx-auto">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TextCenter_animatedCircle
+        bgImage="PHP/s2-bg-img-1.webp"
+        subtitle="Development"
+        title="PHP Web Development"
+        description="Geektheory is a leading PHP web development company in Chennai,
+        India. PHP is widely used for dynamic web development, powering over
+        80% of websites. Our expert developers cater to both businesses and
+        startups."
+        features={dev}
+      />
 
       {/* New Technologies */}
       <AnimatedSection
@@ -421,81 +277,15 @@ const PhpWebDevelopment = () => {
         services={services}
       />
       {/* Benefits of PHP */}
-      <section className="w-full py-10 px-8 sm:py-14 md:py-16 md:px-18 bg-[url('/body-bg-2-scaled-1.webp')] bg-cover bg-center">
-        {/* Heading */}
-        <div className="container mx-auto px-4 text-center text-black">
-          {/* Subtitle */}
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="uppercase flex gap-3 text-[17px] font-black tracking-wider">
-              <TriangleBullet /> <span>PHP</span>
-            </div>
-          </div>
-
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-extrabold mb-4 leading-tight">
-            Benefits of PHP
-          </h2>
-        </div>
-
-        {/* Description */}
-        <p className="max-w-6xl mx-auto text-center text-black mb-12 text-[18px] font-normal px-4">
-          PHP offers fast, flexible, and cost-effective web development. It's
-          open-source, widely supported, and ensures seamless integration with
-          databases, making it ideal for dynamic, interactive websites.
-        </p>
-
-        {/* Services Grid */}
-        <div className="mt-12 grid gap-8 px-4 sm:px-6 lg:px-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-7xl mx-auto">
-          {servicess.map((service, idx) => {
-            const isMiddleCard = idx % 3 === 1; // Middle in each row
-
-            return (
-              <div
-                key={idx}
-                data-aos={isMiddleCard ? "" : "fade-up"}
-                className="relative group rounded-3xl md:rounded-t-full shadow-lg overflow-hidden flex flex-col min-h-[400px] bg-[#1c1c2e] text-white"
-              >
-                {/* Hover fill overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff3b2a] via-[#e62013] to-[#8b1a10] rounded-t-full scale-y-0 opacity-0 origin-bottom transition-all duration-500 ease-out group-hover:scale-y-100 group-hover:opacity-100"></div>
-
-                {/* Content */}
-                <div className="relative z-10 pt-25 p-10 flex-1 flex flex-col transition-colors duration-500 group-hover:text-white">
-                  <h4 className="text-2xl text-center font-bold mb-4 leading-snug">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-300 group-hover:text-white text-[16px] mb-6 leading-relaxed text-center">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-3 flex-1">
-                    {service.features.map((feat, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-3 text-gray-100 group-hover:text-white text-[16px] leading-snug"
-                      >
-                        <FaArrowRight
-                          className="mt-1 text-gray-400 group-hover:text-white flex-shrink-0"
-                          size={14}
-                        />
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Bottom Link */}
-                {/* <div className="relative z-10 p-4 border-t border-gray-800 flex justify-end group-hover:border-gray-300">
-                  <a
-                    href="#"
-                    className="text-red-500 hover:text-red-400 text-lg"
-                  >
-                    <FaArrowRight />
-                  </a>
-                </div> */}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <ServicesSection
+        subtitle="PHP"
+        title="Benefits of PHP"
+        paragraph="PHP offers fast, flexible, and cost-effective web development. It's open-source, widely supported, and ensures seamless integration with databases."
+        services={servicess}
+        bgImage="/body-bg-2-scaled-1.webp"
+        justify={"justify-center"}
+        // showBullet={false}
+      />
       {/* codeigniter */}
       <RotatingStarL_ImgR
         subtitle="Frameworks"
@@ -505,18 +295,18 @@ const PhpWebDevelopment = () => {
         imageSrc={`${foldername}/codeigniter.webp`}
       />
       {/* Laravel */}
-        <ImageTextSection
-          imageSrc={`${foldername}/laravel.webp`}
-          title="Laravel"
-          subtitle="Frameworks"
-          description="This is a PHP web framework which is open source and can be used free of cost. Laravel is known for its elegant and expressive syntax which can make development a creative experience. As it reduces the stress of tedious tasks such as routing, caching and authentication, the developer is free to focus completely on the coding and other important parts. Best PHP web development company in India can build an application in laravel and it is a powerful as well as accessible web framework that is required for robust applications. In simple words, Laravel is often said to combine the best features of other web frameworks."
-          // description2="Relying on our HTML5 developers will be the best option to get an effective and innovative design for your website. The competency of our experts to use HTML5 canvas drawing tool enables the designers to develop highly responsive website which will make your website have a dominant online presence. Geektheory offers the best HTML5 web design company in Chennai to our clients for leveraging the potential in various ways."
-          animationClass="translate-y-40" // slide from right
-          // bgImage="/body-bg-2-scaled-1.jpg"
-        />
+      <ImageTextSection
+        imageSrc={`${foldername}/laravel.webp`}
+        title="Laravel"
+        subtitle="Frameworks"
+        description="This is a PHP web framework which is open source and can be used free of cost. Laravel is known for its elegant and expressive syntax which can make development a creative experience. As it reduces the stress of tedious tasks such as routing, caching and authentication, the developer is free to focus completely on the coding and other important parts. Best PHP web development company in India can build an application in laravel and it is a powerful as well as accessible web framework that is required for robust applications. In simple words, Laravel is often said to combine the best features of other web frameworks."
+        // description2="Relying on our HTML5 developers will be the best option to get an effective and innovative design for your website. The competency of our experts to use HTML5 canvas drawing tool enables the designers to develop highly responsive website which will make your website have a dominant online presence. Geektheory offers the best HTML5 web design company in Chennai to our clients for leveraging the potential in various ways."
+        animationClass="translate-y-40" // slide from right
+        // bgImage="/body-bg-2-scaled-1.jpg"
+      />
       {/* PHP Web Experts */}
       <section
-        className="w-full py-10 sm:py-14 md:py-16"
+        className="w-full py-8 px-4 sm:px-6 md:py-14 md:px-8 lg:px-14"
         style={{
           backgroundImage: `url('/b1-bg-1.webp')`, // change if needed
           backgroundSize: "cover",
@@ -602,27 +392,23 @@ const PhpWebDevelopment = () => {
         </div>
       </section>
       {/* Php Development Services */}
-      <section>
-        <ImageTextSection
-          imageSrc={`${foldername}/php-sesrvices.webp`}
-          title="Php Development Services"
-          subtitle="PHP"
-          description="PHP is an open-source, widely used server-side language powering over 80% of websites. At Geektheory, we leverage PHP to build interactive, user-friendly websites. As one of the best PHP development companies in Chennai, we combine design standards with SEO to deliver complete web solutions that drive online growth."
-          // description2="Relying on our HTML5 developers will be the best option to get an effective and innovative design for your website. The competency of our experts to use HTML5 canvas drawing tool enables the designers to develop highly responsive website which will make your website have a dominant online presence. Geektheory offers the best HTML5 web design company in Chennai to our clients for leveraging the potential in various ways."
-          animationClass="translate-y-40" // slide from right
-          // bgImage="/body-bg-2-scaled-1.jpg"
-        />
-      </section>
+      <ImageTextSection
+        imageSrc={`${foldername}/php-sesrvices.webp`}
+        title="Php Development Services"
+        subtitle="PHP"
+        description="PHP is an open-source, widely used server-side language powering over 80% of websites. At Geektheory, we leverage PHP to build interactive, user-friendly websites. As one of the best PHP development companies in Chennai, we combine design standards with SEO to deliver complete web solutions that drive online growth."
+        // description2="Relying on our HTML5 developers will be the best option to get an effective and innovative design for your website. The competency of our experts to use HTML5 canvas drawing tool enables the designers to develop highly responsive website which will make your website have a dominant online presence. Geektheory offers the best HTML5 web design company in Chennai to our clients for leveraging the potential in various ways."
+        animationClass="translate-y-40" // slide from right
+        // bgImage="/body-bg-2-scaled-1.jpg"
+      />
       {/* Animated Section */}
-      <section>
-        <CTASection
-          subtitle="CONTACT US"
-          title="Looking For A Web Development Company?"
-          buttonText="TALK TO OUR EXPERTS"
-          buttonLink="https://geektheo.com/about/"
-          backgroundImage="/bg.webp"
-        />
-      </section>
+      <CTASection
+        subtitle="CONTACT US"
+        title="Looking For A Web Development Company?"
+        buttonText="TALK TO OUR EXPERTS"
+        buttonLink="https://geektheo.com/about/"
+        backgroundImage="/bg.webp"
+      />
     </>
   );
 };
