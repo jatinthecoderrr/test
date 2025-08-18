@@ -11,10 +11,14 @@ import SectionHeader from "../services/Animated_SectionHeader";
  * @param {Array} services - Services array [{ title, description, image, link }]
  */
 function ServicesSection({
-  subTitle = "Our Best Services",
-  titleWords = ["We", "Provide", "Best", "Services"],
-  description = "Discover our premium services designed to deliver exceptional results.",
+  subTitle,
+  titleWords,
+  description,
   services = [],
+  paragraph2,
+  justify,
+  text_align,
+  showBullet,
 }) {
   // Function to determine border classes (kept same as your logic)
   function getBorderClasses(index) {
@@ -48,6 +52,10 @@ function ServicesSection({
           subTitle={subTitle}
           titleWords={titleWords}
           description={description}
+          description2={paragraph2}
+          justify={justify}
+          text_align={text_align}
+          showBullet={showBullet}
         />
 
         {/* Services Grid */}

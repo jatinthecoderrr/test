@@ -10,17 +10,25 @@ import TriangleBullet from "../Home/TriangleBullet";
  */
 function BenefitsSection({
   subtitle,
-  title = "Website Redesign Benefits",
-  paragraph = "Default paragraph goes here...",
+  title,
+  paragraph,
   features = [],
+  bgImage,
+  bgColor = "white",
 }) {
   return (
-    <section className="w-full py-6 sm:py-8 md:py-14 md:px-10 bg-neutral-50 relative z-10">
+    <section
+      className="w-full py-6 sm:py-8 md:py-14 md:px-10 relative z-10"
+      style={{
+        backgroundImage: bgImage ? `url(${bgImage})` : "",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: bgColor, // fallback
+      }}
+    >
       {/* Subtitle */}
-      <div
-       
-        className="text-gray-600 justify-center items-center flex gap-3 text-[19px] font-extrabold mb-2 uppercase animate-fadeInDown "
-      >
+      <div className="text-gray-600 justify-center items-center flex gap-3 text-[19px] font-extrabold mb-2 uppercase animate-fadeInDown ">
         <TriangleBullet /> <span>{subtitle}</span>
       </div>
 

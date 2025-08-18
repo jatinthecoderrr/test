@@ -11,92 +11,123 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import FeatureSection from "../../../components/services/ImageR_TickMarkL";
-
+import TextR_AutoSliderL from "../../../components/services/textR_AutoSliderL";
+import BenefitsSection from "../../../components/services/HoverTextCards";
+import ServicesSection from "../../../components/services/CenterText_ReadMore";
 const ProgressiveWebApps = () => {
   const foldername = "/Progressive_Web_Apps";
-  //Progressive Web Applications
-  const imgRef = useRef(null);
-  const textRef = useRef(null);
-  const [imgVisible, setImgVisible] = useState(false);
-  const [textVisible, setTextVisible] = useState(false);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef.current) imgObserver.observe(imgRef.current);
-    if (textRef.current) textObserver.observe(textRef.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  const features = [
-    "We use PWA features like service workers & TLS.",
-    "Users can choose to keep the app on the home screen or app launcher.",
-    "On return visits, the browser shows a prompt from manifest details.",
-    "Launching from the home screen lets the app work offline, giving users a full app-like experience.",
+  const myServices = [
+    {
+      title: "Services Workers",
+      description:
+        "At Geektheory, we deliver top Progressive Web App services with a tailored approach for the best solutions.",
+      image: `${foldername}/users.webp`,
+      link: "#",
+    },
+    {
+      title: "Application Shell",
+      description:
+        "At Geektheory, our team provides top Progressive Web App services with a tailored approach for guaranteed success",
+      image: `${foldername}/web-dev.webp`,
+      link: "#",
+    },
+    {
+      title: "The Mobile Push",
+      description:
+        "Most websites use Chrome web push notifications, yet many don't utilize their full potential. Check the hype cycle.",
+      image: `${foldername}/mobile-configuration-5400824-4521549-1.webp`,
+      link: "#",
+    },
   ];
-  // Installation and App Manifestation
-  const textRef2 = useRef(null);
-  const [textVisible2, setTextVisible2] = useState(false);
-  useEffect(() => {
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible2(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (textRef2.current) textObserver.observe(textRef2.current);
-
-    return () => {
-      textObserver.disconnect();
-    };
-  }, []);
+  const iconBoxes = [
+    {
+      title: "Progressive",
+      description:
+        "Progressive Web Apps combine web and app features for seamless, efficient user experiences.",
+      img: `${foldername}/pwa.webp`,
+      hoverColor: "group-hover:text-[#ff0000]",
+    },
+    {
+      title: "Responsive",
+      description:
+        "We craft designs for startups, focusing on UI/UX tailored to their target customers.",
+      img: `${foldername}/responsive-2.webp`,
+      hoverColor: "group-hover:text-[#00ff00]",
+    },
+    {
+      title: "Connectivity",
+      description:
+        "Our web apps ensure fast loading on slow networks with lightweight, simple code",
+      img: `${foldername}/crm2.webp`,
+      hoverColor: "group-hover:text-[#8a8aff]",
+    },
+    {
+      title: "App-Life",
+      description:
+        "Our web app offers app-like interaction and navigation with the app shell model.",
+      img: `${foldername}/mobile-app.webp`,
+      hoverColor: "group-hover:text-[#41e0d0]",
+    },
+    {
+      title: "Fresh",
+      description:
+        "The app stays up-to-date with automatic updates, no need for manual store updates.",
+      img: `${foldername}/update.webp`,
+      hoverColor: "group-hover:text-[#ffae17]",
+    },
+    {
+      title: "Safe",
+      description:
+        "Geektheory ensures security, protecting web apps from vulnerabilities and attacks.",
+      img: `${foldername}/auth-payment.webp`,
+      hoverColor: "group-hover:text-[#800080]",
+    },
+    {
+      title: "Discoverable",
+      description:
+        "Our experts develop PWAs with server worker registration and W3C manifest for SEO.",
+      img: `${foldername}/search.webp`,
+      hoverColor: "group-hover:text-[#b04343]",
+    },
+    {
+      title: "Re-Engageable",
+      description:
+        "At Geektheory, we ensure the target audience stays engaged, making us stand out.",
+      img: `${foldername}/b2b.webp`,
+      hoverColor: "group-hover:text-[#00ffff]",
+    },
+    {
+      title: "Installable",
+      description:
+        "At Geektheory, we ensure the target audience stays engaged, setting us apart.",
+      img: `${foldername}/extract-process.webp`,
+      hoverColor: "group-hover:text-[#ff00ff]",
+    },
+  ];
   const services = [
     {
       title: "App Installation",
-      content:
+      description:
         "Previously, mobile apps didn't get installed as apps on home screens on platforms like Android or iOS.",
-      icon: `${foldername}/mobile-app.webp`,
+      img: `${foldername}/mobile-app.webp`,
     },
     {
       title: "Missing Features",
-      content:
+      description:
         "These apps lacked the features we expected from native apps, offering a limited experience.",
-      icon: `${foldername}/question_mark.webp`,
+      img: `${foldername}/question_mark.webp`,
     },
     {
       title: "Chrome Support",
-      content:
+      description:
         "Chrome on Android now supports the installation of web apps directly to the home screen.",
-      icon: `${foldername}/google-chrome.webp`,
+      img: `${foldername}/google-chrome.webp`,
     },
     {
       title: "Manifestation Code",
-      content:
+      description:
         "To inform Chrome that the mobile website can be installed as an app, we create a manifest file.",
-      icon: `${foldername}/code.webp`,
+      img: `${foldername}/code.webp`,
     },
   ];
   // Progressive Web App Development
@@ -133,89 +164,6 @@ const ProgressiveWebApps = () => {
       textObserver.disconnect();
     };
   }, []);
-  // TRY
-  const iconBoxes = [
-    {
-      title: "Progressive",
-      description:
-        "Progressive Web Apps combine web and app features for seamless, efficient user experiences.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/pwa.webp",
-      link: "#",
-    },
-    {
-      title: "Responsive",
-      description:
-        "We craft designs for startups, focusing on UI/UX tailored to their target customers.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/01/responsive-2.webp",
-      link: "#",
-    },
-    {
-      title: "Connectivity",
-      description:
-        "Our web apps ensure fast loading on slow networks with lightweight, simple code",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/crm2.webp",
-      link: "#",
-    },
-    {
-      title: "App-Life",
-      description:
-        "Our web app offers app-like interaction and navigation with the app shell model.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/01/mobile-app.webp",
-      link: "#",
-    },
-    {
-      title: "Fresh",
-      description:
-        "The app stays up-to-date with automatic updates, no need for manual store updates.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/update.webp",
-      link: "#",
-    },
-    {
-      title: "Safe",
-      description:
-        "Geektheory ensures security, protecting web apps from vulnerabilities and attacks.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/auth-payment.webp",
-      link: "#",
-    },
-    {
-      title: "Discoverable",
-      description:
-        "Our experts develop PWAs with server worker registration and W3C manifest for SEO.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/search.webp",
-      link: "#",
-    },
-    {
-      title: "Re-Engageable",
-      description:
-        "At Geektheory, we ensure the target audience stays engaged, making us stand out.",
-      img: "https://geeknew.sonicboomx.com/wp-content/uploads/2025/02/b2b.webp",
-      link: "#",
-    },
-    {
-      title: "Installable",
-      description:
-        "At Geektheory, we ensure the target audience stays engaged, setting us apart.",
-      img: `${foldername}/extract-process.webp`,
-      link: "#",
-    },
-  ];
-  // Track which item is hovered
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [titleColor, setTitleColor] = useState("#000");
-
-  const handleIconMouseEnter = (index) => {
-    setHoveredIndex(index);
-    // Generate a random color for the title glow
-    const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
-    setTitleColor(randomColor);
-  };
-
-  const handleIconMouseLeave = () => {
-    setHoveredIndex(null);
-    setTitleColor("#000");
-  };
-
-  const title = "Progressive Web Apps";
   return (
     <>
       <div
@@ -326,186 +274,47 @@ const ProgressiveWebApps = () => {
           </div>
         </div>
       </section>
+      {/* TRY */}
+      <ServicesSection
+        subTitle="Web App"
+        titleWords="Things needed to Develop a PWA"
+        description="At Geektheory, Progressive apps are built to allow the user to install the app directly from the website. We develop apps which are suited to be adaptive across all devices and can blend seamlessly into native app-like interface and design. We are the future of web application. We make sure that our top Progressive web app development Chennai takes your mobile performance up by a notch for making the platform independent."
+        services={myServices}
+        columns={{ sm: 1, md: 2, lg: 4 }}
+        justify="justify-center"
+      />
       {/* Installation and App Manifestation */}
-      <section className="w-full py-10 md:py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-          {/* Left Column - Swiper Slider */}
-          <div className="w-full md:w-1/2">
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 20 },
-              }}
-              loop={true}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
-              style={{
-                "--swiper-pagination-color": "#FF0000",
-                "--swiper-pagination-bullet-size": "10px",
-              }}
-              className="!pb-8"
-            >
-              {services.map((service, index) => (
-                <SwiperSlide key={index}>
-                  <div className="bg-gray-50 h-[300px] p-4 sm:p-6 rounded-lg shadow-md text-center flex flex-col justify-start px-2 sm:px-4">
-                    <div className="flex justify-start mb-4">
-                      <img
-                        src={service.icon}
-                        alt={service.title}
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-                      />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-semibold mb-2 text-left">
-                      {service.title}
-                    </h4>
-                    <p className="text-gray-600 text-left text-sm sm:text-base font-medium">
-                      {service.content}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+      <TextR_AutoSliderL
+        // subtitle="Company Goals"
+        title="Installation and App Manifestation"
+        paragraph="Installation and App Manifestation allows web apps to be installed on the home screen, with Chrome supporting this on Android via a manifest file."
+        slides={services}
+        text_align="text-left"
+        showBullet={false}
+      />
 
-          {/* Right Column - Text */}
-          <div
-            ref={textRef2}
-            className={`w-full md:w-1/2 flex flex-col justify-center px-2 sm:px-0 transition-all duration-700 ${
-              textVisible2
-                ? "translate-x-0 opacity-100"
-                : "translate-x-10 opacity-0"
-            }`}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug sm:leading-tight mb-4">
-              Installation and App Manifestation
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-base sm:text-lg md:text-lg">
-              Installation and App Manifestation allows web apps to be installed
-              on the home screen, with Chrome supporting this on Android via a
-              manifest file.
-            </p>
-          </div>
-        </div>
-      </section>
       {/* Progressive Web Applications(COMMPONENT)  */}
       <FeatureSection
-      subTitle="Applications"
-      title="Progressive Web Applications"
-      description1="Our experts ensure your app works across all platforms. We understand your business needs, goals, and target audience to build a website that drives success."
-      features={[
-        "We use PWA features like service workers & TLS",
-        "Users can choose to keep the app on the home screen or app launcher.",
-        "On return visits, the browser shows a prompt from manifest details.",
-        "Launching from the home screen lets the app work offline, giving users a full app-like experience.",
-      ]}
-      image={`${foldername}/pwa-1.webp`}
-      bgImage=""
-      bgColor="#f5f3f0"
-    />
-      {/* TRY */}
-      <section className="w-full py-12 bg-white">
-        {/* Heading */}{" "}
-        <div className="container mx-auto px-4 text-center text-black">
-          {/* Subtitle */}{" "}
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="uppercase flex gap-3 text-[17px] font-black tracking-wider">
-              <TriangleBullet /> <span>Design</span>{" "}
-            </div>{" "}
-          </div>{" "}
-          {/* Heading */}{" "}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-extrabold mb-4 leading-tight">
-            {" "}
-            Creative Design​
-          </h2>{" "}
-        </div>{" "}
-        {/* Description */}{" "}
-        <p className="max-w-6xl mx-auto text-center text-black mb-12 text-[18px] font-normal px-4">
-          {" "}
-          Geektheory creates visually appealing corporate websites, consulting
-          with clients to understand their needs, ensuring innovation, and
-          delivering the best design service.{" "}
-        </p>{" "}
-        {/* GRID */}{" "}
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {iconBoxes.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-start space-x-4 hover:scale-105 transition-transform duration-300"
-            >
-              <div className="bg-gray-100 p-4 rounded-full shadow-md">
-                {feature.img}
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-black">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* GARVIT */}
-      <section className="w-full py-10 sm:py-14 md:py-16 md:px-10 bg-neutral-50 relative z-10">
-        <div className="text-gray-800 justify-center items-center flex gap-3 text-[19px] font-extrabold mb-2 uppercase animate-fadeInDown">
-          <TriangleBullet /> <span>Benefits</span>
-        </div>
-
-        {/* Split-letter Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex justify-center flex-wrap leading-snug">
-          {title.split("").map((char, i) => (
-            <span
-              key={i}
-              className="split-letter"
-              style={{ animationDelay: `${i * 0.05}s` }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-          ))}
-        </h2>
-
-        <p className="text-gray-600 mt-4 mb-0 text-center text-base sm:text-lg leading-relaxed max-w-7xl mx-auto">
-          Redesigning your website can give your business a fresh start. Our top
-          website redesign services in Chennai help you revamp outdated elements
-          and realign your site with your brand. If you’ve been planning a
-          change, our experts are ready to give your website the makeover it
-          needs—turning your vision into a powerful new beginning.
-        </p>
-
-        <div className="max-w-7xl mx-auto px-8 py-16 cursor-pointer">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 md:gap-12">
-            {iconBoxes.map((feature, idx) => (
-              <div
-                key={idx}
-                className="flex items-start gap-8 transition-colors duration-300 group"
-              >
-                {/* Image Circle */}
-                <div className="flex-shrink-0 w-20 h-20 rounded-full shadow-xl flex items-center justify-center bg-white transition-transform duration-300 group-hover:scale-110">
-                  <img
-                    src={feature.img}
-                    alt={feature.title}
-                    className="w-18 h-18 p-1"
-                  />
-                </div>
-
-                {/* Text */}
-                <div>
-                  <h3
-                    className={`text-xl font-extrabold text-gray-900 mb-2 transition-colors duration-300 ${feature.hoverColor}`}
-                  >
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-base font-medium leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        subTitle="Applications"
+        title="Progressive Web Applications"
+        description1="Our experts ensure your app works across all platforms. We understand your business needs, goals, and target audience to build a website that drives success."
+        features={[
+          "We use PWA features like service workers & TLS",
+          "Users can choose to keep the app on the home screen or app launcher.",
+          "On return visits, the browser shows a prompt from manifest details.",
+          "Launching from the home screen lets the app work offline, giving users a full app-like experience.",
+        ]}
+        image={`${foldername}/pwa-1.webp`}
+        bgImage=""
+        bgColor="#f5f3f0"
+      />
+      {/* Creative Design */}
+      <BenefitsSection
+        subtitle="Design​"
+        title="Creative Design"
+        paragraph="Geektheory creates visually appealing corporate websites, consulting with clients to understand their needs, ensuring innovation, and delivering the best design service."
+        features={iconBoxes}
+      />
     </>
   );
 };

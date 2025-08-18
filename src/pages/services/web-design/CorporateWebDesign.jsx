@@ -8,6 +8,7 @@ import MissionVision from "../../../components/services/TextL_AutoSliderR";
 import AnimatedSection from "../../../components/services/RotatingStarL_ImgR";
 import RotatingStarR_ImgL from "../../../components/services/RotatingStarR_ImgL";
 import SliderL_TickR from "../../../components/services/AutoSliderL_TickR";
+import TextR_AutoSliderL from "../../../components/services/textR_AutoSliderL";
 
 const CorporateWebDesign = () => {
   const foldername = "Website Redesigning";
@@ -205,6 +206,7 @@ const CorporateWebDesign = () => {
         description="We help businesses grow with technology-driven services located in the heart of the city, we specialize in delivering top-notch web design solutions that elevate your brand and engage your audience. Our team of experts combines creativity with technical expertise to create stunning, user-friendly websites that drive results."
         services={myServices}
         columns={{ sm: 1, md: 2, lg: 4 }}
+        justify="justify-center"
       />
 
       <FeatureSection
@@ -259,6 +261,15 @@ const CorporateWebDesign = () => {
         title="Mission, Vision & Values"
         // description="At Geektheory, we ensure your new website outshines the old one and meets modern standards. Our redesign services refresh your brand and correct past design flaws Magento, an open-source CMS powered by PHP and MySQL, is gaining popularity for ecommerce websites. It allows businesses to stand out with customized features, offering an interactive user base and SEO benefits for better Google rankings. Magento also serves as a powerful marketing tool, enabling easy website customization to meet business needs. As the leading Magento development agency in Chennai, we ensure the best solutions for your ecommerce growth."
         slides={missionSlides}
+      />
+
+      <TextR_AutoSliderL
+        // subtitle="Company Goals"
+        title="Mission, Vision & Values"
+        paragraph="At Geektheory, we ensure your new website outshines the old one and meets modern standards. Our redesign services refresh your brand and correct past design flaws Magento, an open-source CMS powered by PHP and MySQL, is gaining popularity for ecommerce websites. It allows businesses to stand out with customized features, offering an interactive user base and SEO benefits for better Google rankings. Magento also serves as a powerful marketing tool, enabling easy website customization to meet business needs. As the leading Magento development agency in Chennai, we ensure the best solutions for your ecommerce growth."
+        slides={missionSlides}
+        text_align="text-left"
+        showBullet={false}
       />
 
       <SliderL_TickR
