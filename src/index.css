@@ -1,0 +1,65 @@
+@import "tailwindcss";
+/* @import "tailwindcss/base"; */
+/* @import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+.nunito-ubrnist {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.active {
+  color: #fc2411;
+  font-weight: 400;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ...existing code... */
+@keyframes stretchFromLeft {
+  0% {
+    transform: scaleX(0); /* compressed horizontally */
+    opacity: 0;
+  }
+  60% {
+    transform: scaleX(1.2); /* overshoot to the right */
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1); /* settle back to normal */
+    opacity: 1;
+  }
+}
+
+.animate-stretchFromLeft {
+  transform-origin: left; /* keep left edge fixed */
+  animation: stretchFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ...existing code... */

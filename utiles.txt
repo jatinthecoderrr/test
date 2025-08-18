@@ -1,0 +1,8 @@
+red color = #FC2411;
+
+btncolor = #800000;
+secndbtn = #141515;
+
+third = #5f5f5f ;
+
+line = #313030;
