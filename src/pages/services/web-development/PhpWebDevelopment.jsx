@@ -9,7 +9,8 @@ import "aos/dist/aos.css";
 import Button from "../../../components/Button";
 import Accordion from "../../../components/Home/Accordion";
 import AnimatedSection from "../../../components/services/TextL_IconEffectR";
-
+import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
+import RotatingStarL_ImgR from "../../../components/services/RotatingStarL_ImgR";
 const PhpWebDevelopment = () => {
   const foldername = "/PHP";
   //PHP Web Development
@@ -346,116 +347,20 @@ const PhpWebDevelopment = () => {
         </div>
       </div>
       {/* Benefits of HTML5 Web Designing */}
-      <section
-        className="w-full py-10 sm:py-14 md:py-16 bg-white"
-        style={{
-          backgroundImage: "", // change if needed
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "", // fallback color
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
-          {/* Left: Text */}
-          <div className="order-2 md:order-1" ref={textRef}>
-            <div
-              className={`text-left space-y-4 transition-all duration-700 ease-out ${
-                textVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-            >
-              <h5
-                className={`flex gap-3 text-base sm:text-lg md:text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>PHP</span>
-              </h5>
-              <h2
-                className={`text-2xl sm:text-4xl md:text-[60px] not-italic normal-case font-extrabold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                PHP Web Development
-              </h2>
-              <p
-                className={`text-gray-700 text-base sm:text-lg md:text-[18px] not-italic normal-case font-normal leading-relaxed transition-all duration-700 delay-300 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Geektheory delivers high-quality web development services, with
-                over 82.6% of all websites using PHP as their programming
-                language. PHP powers more than 40 million websites worldwide.
-                Our experienced web developers specialize in Laravel and
-                CodeIgniter, and with over 11 years of expertise, we create
-                scalable and efficient solutions for businesses.
-              </p>
-              <p
-                className={`text-gray-700 leading-relaxed text-base sm:text-lg md:text-[18px] transition-all duration-700 delay-300 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              ></p>
-              <div
-                className={`${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <ul className="space-y-2 sm:space-y-3">
-                  {features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="group flex items-start gap-2 text-gray-800 text-base sm:text-lg md:text-[20px] cursor-pointer transition-all duration-300 hover:text-[#fc2512]"
-                    >
-                      <span className="text-black mt-1 transition-colors duration-300 group-hover:text-[#fc2512]">
-                        <FaCheckCircle size={20} />
-                      </span>
-                      <span className="transition-colors duration-300 group-hover:text-black">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div
-            id="img-col"
-            className="flex justify-center items-center order-1 md:order-2"
-          >
-            <div
-              ref={imgRef}
-              className={`transition-all duration-700 ease-out transform ${
-                imgVisible
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-20 opacity-0"
-              }`}
-            >
-              <div className="main-img d-block">
-                <img
-                  src={`${foldername}/php-dev.webp`} // change if needed
-                  alt="Service"
-                  className="rounded-3xl w-full h-auto max-h-[250px] sm:h-64 md:h-[300px] md:rounded-3xl object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* PHP devlopment */}
+      <FeatureSectionRev
+        subTitle="PHP"
+        title="PHP Web Development"
+        description1="Geektheory delivers high-quality web development services, with over 82.6% of all websites using PHP as their programming language. PHP powers more than 40 million websites worldwide. Our experienced web developers specialize in Laravel and CodeIgniter, and with over 11 years of expertise, we create scalable and efficient solutions for businesses."
+        // description2="Our redesign services refresh your brand and correct past design flaws for   ."
+        features={[
+          "82.6% Of All Websites Used PHP As Their Programming Language",
+          "PHP Is Used By More Than 40 Million Websites",
+          "Our Panel Of Web Developers Work With Laravel And codeigniter",
+          "We Have More Than 11 Years Of Experience In PHP",
+        ]}
+        image={`${foldername}/php-dev.webp`}
+      />
+      {/* PHP Development */}
       <section className="w-full bg-center bg-[url('PHP/s2-bg-img-1.webp')] bg-cover bg-no-repeat py-10 sm:py-14">
         <div className="container mx-auto px-4 text-center text-white">
           {/* Subtitle */}
@@ -516,7 +421,7 @@ const PhpWebDevelopment = () => {
         services={services}
       />
       {/* Benefits of PHP */}
-      <section className="w-full py-12 bg-[url('/body-bg-2-scaled-1.webp')] bg-cover bg-center">
+      <section className="w-full py-10 px-8 sm:py-14 md:py-16 md:px-18 bg-[url('/body-bg-2-scaled-1.webp')] bg-cover bg-center">
         {/* Heading */}
         <div className="container mx-auto px-4 text-center text-black">
           {/* Subtitle */}
@@ -592,115 +497,14 @@ const PhpWebDevelopment = () => {
         </div>
       </section>
       {/* codeigniter */}
-      <section
-        className="w-full  px-4 py-10 sm:py-12 sm:px-6 md:py-16 md:px-10 bg-white"
-        style={{
-          // backgroundImage: `url('/body-bg-2-scaled-1.jpg')`, // change if needed
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#ffffff", // fallback color
-        }}
-      >
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
-          {/* Left: Text */}
-          <div className="order-2 md:order-1" ref={textRef2}>
-            <div
-              className={`text-left space-y-4 transition-all duration-700 ease-out ${
-                textVisible2
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-            >
-              <h5
-                className={`flex gap-3 text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>Frameworks</span>
-              </h5>
-              <h2
-                className={`text-4xl font-bold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Codeigniter
-              </h2>
-              <p
-                className={`text-gray-700 leading-relaxed text-base transition-all duration-700 delay-300 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                This too is an open source web framework that is used for
-                creating dynamic and responsive websites with PHP. Loosely based
-                on the well-known MVC or model view controller development
-                pattern, Codeigniter is a powerful PHP framework which has a
-                very small footprint. It is best suited for developers who are
-                in need of an elegant and simple tool to build full featured
-                applications. Compared to some other PHP frameworks, Codeigniter
-                is known for its higher speed. Best PHP web development company
-                in India have experts of team members to develop website in
-                codeigniter.
-              </p>
-              <p
-                className={`text-gray-700 leading-relaxed text-[18px] text-base transition-all duration-700 delay-300 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              ></p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
-                {steps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 group ">
-                    {/* Circle with Star */}
-                    <div
-                      className={`flex items-center justify-center w-12 h-12 rounded-full ${step.color} transition-transform duration-500 ease-out group-hover:scale-125`}
-                    >
-                      <FaRegStar
-                        size={20}
-                        className="transition-transform duration-500 ease-out group-hover:rotate-180"
-                      />
-                    </div>
-
-                    {/* Text */}
-                    <span className="font-bold text-lg leading-tight transition-colors duration-300 group-hover:text-gray-700">
-                      {step.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div id="img-col" className="flex justify-center order-1 md:order-2">
-            <div
-              ref={imgRef2}
-              className={`transition-all duration-700 ease-out transform ${
-                imgVisible2
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-40 opacity-0"
-              }`}
-            >
-              <div className="main-img d-block">
-                <img
-                  src={`${foldername}/codeigniter.webp`} // change if needed
-                  alt="Service"
-                  className="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <RotatingStarL_ImgR
+        subtitle="Frameworks"
+        title="Codeigniter"
+        description="This too is an open source web framework that is used for creating dynamic and responsive websites with PHP. Loosely based on the well-known MVC or model view controller development pattern, Codeigniter is a powerful PHP framework which has a very small footprint. It is best suited for developers who are in need of an elegant and simple tool to build full featured applications. Compared to some other PHP frameworks, Codeigniter is known for its higher speed. Best PHP web development company in India have experts of team members to develop website in codeigniter."
+        steps={steps}
+        imageSrc={`${foldername}/codeigniter.webp`}
+      />
       {/* Laravel */}
-      <section>
         <ImageTextSection
           imageSrc={`${foldername}/laravel.webp`}
           title="Laravel"
@@ -710,7 +514,6 @@ const PhpWebDevelopment = () => {
           animationClass="translate-y-40" // slide from right
           // bgImage="/body-bg-2-scaled-1.jpg"
         />
-      </section>
       {/* PHP Web Experts */}
       <section
         className="w-full py-10 sm:py-14 md:py-16"

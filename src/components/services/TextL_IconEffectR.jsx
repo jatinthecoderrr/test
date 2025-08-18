@@ -40,7 +40,7 @@ const AnimatedSection = ({
 
   return (
     <section
-      className="w-full py-10 sm:py-14 md:py-16"
+      className="w-full py-10 px-8 sm:py-14 md:py-16 md:px-18"
       style={{
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : "",
         backgroundSize: "cover",
