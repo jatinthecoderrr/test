@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
-import SectionHeader from "../component/Animated_SectionHeader";
+import SectionHeader from "./Animated_SectionHeader";
 
 
 /**

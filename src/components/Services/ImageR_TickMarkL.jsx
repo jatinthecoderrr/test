@@ -178,20 +178,20 @@ export default FeatureSectionRev;
 
 // function HomePage() {
 //   return (
-//     <FeatureSectionRev
-//       subTitle="Redesigning"
-//       title="Why Go For Website Redesigning?"
-//       description1="At Geektheory, we ensure your new website outshines the old one."
-//       description2="Our redesign services refresh your brand and correct past design flaws."
-//       features={[
-//         "Responsive and mobile-friendly",
-//         "Improved SEO structure",
-//         "Faster load times",
-//         "Modern UI/UX design",
-//       ]}
-//       image="/images/features.webp"
-//       bgImage="/images/bg-pattern.png"
-//       bgColor="#f9fafb"
-//     />
+    // <FeatureSectionRev
+    //   subTitle="Redesigning"
+    //   title="Why Go For Website Redesigning?"
+    //   description1="At Geektheory, we ensure your new website outshines the old one."
+    //   description2="Our redesign services refresh your brand and correct past design flaws."
+    //   features={[
+    //     "Responsive and mobile-friendly",
+    //     "Improved SEO structure",
+    //     "Faster load times",
+    //     "Modern UI/UX design",
+    //   ]}
+    //   image="/images/features.webp"
+    //   bgImage="/images/bg-pattern.png"
+    //   bgColor="#f9fafb"
+    // />
 //   );
 // }

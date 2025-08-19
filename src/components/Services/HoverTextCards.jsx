@@ -26,7 +26,7 @@ function BenefitsSection({
       />
 
       {/* Features Grid */}
-      <div className="max-w-7xl mx-auto px-8 py-16 cursor-pointer">
+      <div className="max-w-7xl mx-auto px-8 pb-8  pt-2 md:pb-8 md:pt-3 cursor-pointer">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 md:gap-12">
           {features.map((feature, idx) => (
             <div

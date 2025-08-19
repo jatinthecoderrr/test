@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import TriangleBullet from "../Home/TriangleBullet";
+import SectionHeader from "../Services/Animated_SectionHeader"
 
 /**
  * Reusable Services Slider Section
@@ -15,9 +15,9 @@ import TriangleBullet from "../Home/TriangleBullet";
  * @param {string} bgColor - Background color (default #f5f3f0)
  */
 function ServicesSlider({
-  subTitle = "Our Services",
-  title = "Our Best Offerings",
-  discription = "",
+  subTitle,
+  title,
+  discription,
   services = [],
   bgColor = "#f5f3f0",
 }) {
@@ -31,25 +31,13 @@ function ServicesSlider({
     >
       <div className="container mx-auto px-4 text-center">
         {/* Subtitle */}
-        <div className="text-[rgb(91,91,91)] justify-center items-center flex gap-3 text-[19px] font-extrabold mb-2 uppercase animate-fadeInDown">
-          <TriangleBullet /> <span>{subTitle}</span>
-        </div>
-
-        {/* Split-letter Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex justify-center flex-wrap leading-snug">
-          {title.split("").map((char, i) => (
-            <span
-              key={i}
-              className="split-letter"
-              style={{ animationDelay: `${i * 0.05}s` }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-          ))}
-        </h2>
-        <p className="pd-5 md:pb-10 text-gray-600 text-lg font-medium"> 
-            {discription}
-        </p>
+         <SectionHeader
+        subTitle={subTitle}
+        titleWords={title}
+        description={discription}
+        text_align="md:text-center"
+        justify="justify-center"
+      />
 
         <div className="relative mt-8">
           {/* Slider Buttons */}
@@ -151,11 +139,11 @@ export default ServicesSlider;
 
 // function HomePage() {
 //   return (
-//     <ServicesSlider
-//       subTitle="What We Offer"
-//       title="Our Premium Services"
-//       services={servicesData}
-//       bgColor="#f5f3f0"
-//     />
+    // <ServicesSlider
+    //   subTitle="What We Offer"
+    //   title="Our Premium Services"
+    //   services={servicesData}
+    //   bgColor="#f5f3f0"
+    // />
 //   );
 // }

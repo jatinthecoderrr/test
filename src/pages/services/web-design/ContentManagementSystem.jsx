@@ -1,153 +1,27 @@
+import React from "react";
 import ImageTextSection from "../../../components/imageL_TextR";
 import ImageTextSectionReversed from "../../../components/imageR_TextL";
+import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
+import FeatureSection from "../../../components/services/ImageL_TickMarkR";
+import RotatingStarL_ImgR from "../../../components/services/RotatingStarL_ImgR";
+import RotatingStarR_ImgL from "../../../components/services/RotatingStarR_ImgL";
+import SliderL_TickR from "../../../components/services/AutoSliderL_TickR";
 import { useState, useRef, useEffect } from "react";
 import TriangleBullet from "../../../components/Home/TriangleBullet";
 import { FaCheckCircle, FaRegStar } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
 import CTASection from "../../../components/Animatedbox";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
-
 const ContentManagementSystem = () => {
   const tiltRefs = useRef([]);
-  const imgRef = useRef(null);
-  const textRef = useRef(null);
-  const [imgVisible, setImgVisible] = useState(false);
-  const [textVisible, setTextVisible] = useState(false);
-  const imgRef2 = useRef(null);
-  const textRef2 = useRef(null);
-  const [imgVisible2, setImgVisible2] = useState(false);
-  const [textVisible2, setTextVisible2] = useState(false);
-  const imgRef3 = useRef(null);
-  const textRef3 = useRef(null);
-  const [imgVisible3, setImgVisible3] = useState(false);
-  const [textVisible3, setTextVisible3] = useState(false);
-  const textRef4 = useRef(null);
-  const [textVisible4, setTextVisible4] = useState(false);
   const textRef5 = useRef(null);
   const [textVisible5, setTextVisible5] = useState(false);
   const imgRef6 = useRef(null);
   const textRef6 = useRef(null);
   const [imgVisible6, setImgVisible6] = useState(false);
   const [textVisible6, setTextVisible6] = useState(false);
-  const imgRef7 = useRef(null);
-  const textRef7 = useRef(null);
-  const [imgVisible7, setImgVisible7] = useState(false);
-  const [textVisible7, setTextVisible7] = useState(false);
 
   const foldername = "/Content Management System";
-
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef.current) imgObserver.observe(imgRef.current);
-    if (textRef.current) textObserver.observe(textRef.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible2(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible2(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef2.current) imgObserver.observe(imgRef2.current);
-    if (textRef2.current) textObserver.observe(textRef2.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible3(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible3(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef3.current) imgObserver.observe(imgRef3.current);
-    if (textRef3.current) textObserver.observe(textRef3.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  useEffect(() => {
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible4(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    // if (imgRef3.current) imgObserver.observe(imgRef3.current);
-    if (textRef4.current) textObserver.observe(textRef4.current);
-
-    return () => {
-      // imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
   useEffect(() => {
     const textObserver = new IntersectionObserver(
       ([entry]) => {
@@ -208,44 +82,6 @@ const ContentManagementSystem = () => {
       textObserver.disconnect();
     };
   }, []);
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible7(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible7(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (imgRef7.current) imgObserver.observe(imgRef7.current);
-    if (textRef7.current) textObserver.observe(textRef7.current);
-
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
-  const features = [
-    "Intuitive GUI For Easy Use By Non-Tech Users.",
-    "Custom Front-End For A Unique Design.",
-    "Optimized For SEO, Speed, And Stability.",
-    "Extensive Modular And Plug-In Support.",
-    "Strong Community Support And Documentation.",
-    "Adding, Editing, Or Deleting Albums.",
-    "Admin Management",
-  ];
   const features2 = [
     "Open source enterprise",
     "Unlimited extendibility and user-friendly.",
@@ -254,12 +90,6 @@ const ContentManagementSystem = () => {
     "Proficient project planning.",
     "Understand the requisites such as user stories, product owner, and product backlog.",
     "Large and active global community",
-  ];
-  const wordpress = [
-    "Simplifies Content Publishing, Editing, And Deletion, Boosting Website Efficiency.",
-    "Keeps Content Fresh, Improving Search Engine Rankings.",
-    "Enhances Workflow For Better Business Control Over CMS.",
-    "Enables Easy Indexing And Discovery, Aiding Customer Retention.",
   ];
   const steps = [
     {
@@ -282,66 +112,58 @@ const ContentManagementSystem = () => {
   const services = [
     {
       title: "Sports, Fitness, Gym Website",
-      content:
+      description:
         "Custom web design for sports, fitness, and gym websites with features like class schedules, membership management, workout plans, and interactive fitness tracking.",
-      icon: `${foldername}/sports.webp`,
+      img: `${foldername}/sports.webp`,
     },
     {
       title: "Professional and Corporate Website",
-      content:
+      description:
         "Tailored professional and corporate websites with sleek designs, functionality for team showcases, service listings, client testimonials, and business solutions.",
-      icon: `${foldername}/web-dev.webp`,
+      img: `${foldername}/web-dev.webp`,
     },
     {
       title: "Healthcare and Medical Websites",
-      content:
+      description:
         "Custom healthcare and medical websites designed for easy navigation, appointment booking, service information, and patient engagement.",
-      icon: `${foldername}/healthcare2.webp`,
+      img: `${foldername}/healthcare2.webp`,
     },
     {
       title: "Small and Medium Scale Company Sites",
-      content:
+      description:
         "Best web design company for small and medium scale businesses specializes in creating affordable, functional websites that boost online presence.",
-      icon: `${foldername}/ecommerce-1.webp`,
+      img: `${foldername}/ecommerce-1.webp`,
     },
     {
       title: "Charity and NGO",
-      content:
+      description:
         "Top web design company for charity and NGO sites focuses on creating impactful, user-friendly websites that support social causes and enhance engagement.",
-      icon: `${foldername}/charity.webp`,
+      img: `${foldername}/charity.webp`,
     },
     {
       title: "Tours and Travels",
-      content:
+      description:
         "Expert web design for tours and travel sites, offering visually appealing, user-friendly platforms to showcase destinations, packages, and bookings.",
-      icon: `${foldername}/travel-desk.webp`,
+      img: `${foldername}/travel-desk.webp`,
     },
     {
       title: "Property and Real Estate Website",
-      content:
+      description:
         "Custom web design for property and real estate sites, featuring property listings, advanced search options, and seamless user experience for potential buyers.",
-      icon: `${foldername}/lease_paymet.webp`,
+      img: `${foldername}/lease_paymet.webp`,
     },
     {
       title: "Community Website",
-      content:
+      description:
         "Tailored web design for community websites, offering features like member profiles, forums, event calendars, and easy interaction for a connected experience.",
-      icon: `${foldername}/users.webp`,
+      img: `${foldername}/users.webp`,
     },
     {
       title: "Healthcare and Medical Websites",
-      content:
+      description:
         "Custom healthcare and medical websites designed for easy navigation, appointment booking, service information, and patient engagement.",
-      icon: `${foldername}/healthcare2.webp`,
+      img: `${foldername}/healthcare2.webp`,
     },
-  ];
-  const service = [
-    "We create scalable, robust Joomla websites for better user engagement.",
-    "Custom component development transforms your site into something exceptional.",
-    "Share your requirements, and our experts will develop your custom site.",
-    "Custom module development helps attract more users to your website.",
-    "Custom module development helps attract more users to your website.",
-    "We build robust applications to enhance your business visibility.",
   ];
   const servicess = [
     {
@@ -410,328 +232,51 @@ const ContentManagementSystem = () => {
           animationClass="translate-y-40" // slide from right
         />
       </section>
-      {/* Smart CMS Solutions */}
-      <section
-        className="w-full py-16 bg-white"
-        style={{
-          backgroundImage: `url('/body-bg-2-scaled-1.jpg')`, // change if needed
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#ffffff", // fallback color
-        }}
-      >
-        <div className="container mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
-          {/* Left: Text */}
-          <div className="order-2 md:order-1" ref={textRef}>
-            <div
-              className={`text-left space-y-4 transition-all duration-700 ease-out ${
-                textVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-            >
-              <h5
-                className={`flex gap-3 text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>CMS</span>
-              </h5>
-              <h2
-                className={`text-4xl font-bold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Smart CMS Solutions
-              </h2>
-              <p
-                className={`text-gray-700 leading-relaxed text-base transition-all duration-700 delay-300 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                This will work well for smaller sites or the sites which have a
-                short lifespan. A static website is easier to create and host.
-                As a Top web design company in Chennai and static website design
-                Company in Chennai offers creative and appealing designs to our
-                clients. A static website will allow you to explain the
-                objectives and goals of your company. We aim to ensure your
-                online presence with the help of a static website design. If
-                your company has a static website, it will load and launch at a
-                faster rate. Our spool of technical experts discovers new
-                horizons to make you happy with the design.
-              </p>
-              <p
-                className={`text-gray-700 leading-relaxed text-[18px] text-base transition-all duration-700 delay-300 ${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              ></p>
-              <div
-                className={`${
-                  textVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <ul className="space-y-3">
-                  {features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="group flex items-start gap-2 text-gray-800 text-base cursor-pointer transition-all duration-300 hover:text-[#fc2512]"
-                    >
-                      <span className="text-black mt-1 transition-colors duration-300 group-hover:text-[#fc2512]">
-                        <FaCheckCircle size={20} />
-                      </span>
-                      <span className="transition-colors text-[20px] duration-300 group-hover:text-black">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div id="img-col" className="flex justify-center order-1 md:order-2">
-            <div
-              ref={imgRef}
-              className={`transition-all duration-700 ease-out transform ${
-                imgVisible
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-20 opacity-0"
-              }`}
-            >
-              <div className="main-img d-block">
-                <img
-                  src={`${foldername}/web-portal.webp`} // change if needed
-                  alt="Service"
-                  className="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WORDPRESS google */}
-      <section
-        className="w-full py-16 bg-white"
-        style={{
-          // backgroundImage: `url('/body-bg-2-scaled-1.jpg')`, // change if needed
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#ffffff", // fallback color
-        }}
-      >
-        <div className="container mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
-          {/* Left: Text */}
-          <div className="order-2 md:order-1" ref={textRef2}>
-            <div
-              className={`text-left space-y-4 transition-all duration-700 ease-out ${
-                textVisible2
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-            >
-              <h5
-                className={`flex gap-3 text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>WORDPRESS</span>
-              </h5>
-              <h2
-                className={`text-4xl font-bold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                WordPress Google Amp Implementation
-              </h2>
-              <p
-                className={`text-gray-700 leading-relaxed text-base transition-all duration-700 delay-300 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Google AMP enhances website speed and SEO, drawing more traffic
-                while retaining your design. Our experts deliver unique,
-                high-performing sites tailored to your business. As a leading
-                CMS web design company in Chennai, we ensure client satisfaction
-                through expert services and a proven workflow.
-              </p>
-              <p
-                className={`text-gray-700 leading-relaxed text-[18px] text-base transition-all duration-700 delay-300 ${
-                  textVisible2
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              ></p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
-                {steps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 group ">
-                    {/* Circle with Star */}
-                    <div
-                      className={`flex items-center justify-center w-12 h-12 rounded-full ${step.color} transition-transform duration-500 ease-out group-hover:scale-125`}
-                    >
-                      <FaRegStar
-                        size={20}
-                        className="transition-transform duration-500 ease-out group-hover:rotate-180"
-                      />
-                    </div>
-
-                    {/* Text */}
-                    <span className="font-bold text-lg leading-tight transition-colors duration-300 group-hover:text-gray-700">
-                      {step.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Image */}
-          <div id="img-col" className="flex justify-center order-1 md:order-2">
-            <div
-              ref={imgRef2}
-              className={`transition-all duration-700 ease-out transform ${
-                imgVisible2
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-20 opacity-0"
-              }`}
-            >
-              <div className="main-img d-block">
-                <img
-                  src={`${foldername}/google-amp.webp`} // change if needed
-                  alt="Service"
-                  className="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WORDPRESS */}
-      <section
-        className="w-full py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/body-bg-2-scaled-1.jpg')`, // set background image if needed
-          backgroundColor: "white",
-        }}
-      >
-        <div className="container mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
-          {/* Left: Image */}
-          <div className="flex justify-center">
-            <div
-              ref={imgRef3}
-              className={`transition-transform duration-700 ease-out ${
-                imgVisible3
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-20 opacity-25"
-              }`}
-            >
-              <img
-                src={`${foldername}/wordpress2.webp`} // change if needed
-                alt="Sample Alt"
-                className="rounded-lg w-full max-w-md object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Right: Text */}
-          <div
-            ref={textRef3}
-            className={`transition-all duration-700 ease-out ${
-              textVisible3
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
-          >
-            <div className="text-left space-y-4">
-              <h5
-                className={`flex gap-3 text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible3
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>WordPress</span>
-              </h5>
-              <h2
-                className={`text-4xl font-bold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible3
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                WordPress
-              </h2>
-              <p
-                className={`text-gray-700 leading-relaxed text-base transition-all duration-700 delay-300 ${
-                  textVisible3
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Template is important for increasing the sales conversion in the
-                website. This is done by creating a good impression on the
-                search engine crawlers. We understand that your website needs to
-                look uncluttered. Our developers have enough experience in
-                handling this. We have WordPress experts, who will work wonders
-                on the website. The site will surely impress the viewers.
-                Geektheory provided you the best cms web design service in
-                India.
-              </p>
-              <div
-                className={`${
-                  textVisible3
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <ul className="space-y-3">
-                  {wordpress.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="group flex items-start gap-2 text-gray-800 text-base cursor-pointer transition-all duration-300 hover:text-[#fc2512]"
-                    >
-                      <span className="text-black mt-1 transition-colors duration-300 group-hover:text-[#fc2512]">
-                        <FaCheckCircle size={20} />
-                      </span>
-                      <span className="transition-colors text-[20px] duration-300 group-hover:text-black">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Button */}
-              {/* <div className="pt-4">
-                <Button title="Get Started" link="#" />
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
-      
+      {/* Smart CMS Solution (Component) */}
+      <FeatureSectionRev
+        subTitle="CMS"
+        title="Smart CMS Solutions"
+        description1="This will work well for smaller sites or the sites which have a short lifespan. A static website is easier to create and host. As a Top web design company in Chennai and static website design Company in Chennai offers creative and appealing designs to our clients. A static website will allow you to explain the objectives and goals of your company. We aim to ensure your online presence with the help of a static website design. If your company has a static website, it will load and launch at a faster rate. Our spool of technical experts discovers new horizons to make you happy with the design."
+        // description2="Our redesign services refresh your brand and correct past design flaws for   ."
+        features={[
+          "Intuitive GUI For Easy Use By Non-Tech Users.",
+          "Custom Front-End For A Unique Design.",
+          "Optimized For SEO, Speed, And Stability.",
+          "Extensive Modular And Plug-In Support.",
+          "Strong Community Support And Documentation.",
+          "Adding, Editing, Or Deleting Albums.",
+          "Admin Management",
+        ]}
+        image={`${foldername}/web-portal.webp`}
+        bgImage="body-bg-2-scaled-1.jpg"
+        // bgColor=""
+      />
+      {/* WORDPRESS google(Compoment) */}
+      <RotatingStarL_ImgR
+        subtitle="WORDPRESS"
+        title="WordPress Google Amp Implementation"
+        description="Google AMP enhances website speed and SEO, drawing more traffic while retaining your design. Our experts deliver unique, high-performing sites tailored to your business. As a leading CMS web design company in Chennai, we ensure client satisfaction through expert services and a proven workflow."
+        steps={steps}
+        // foldername="/images"
+        imageSrc={`${foldername}/google-amp.webp`}
+      />
+      {/* WORDPRESS(COMPONENT) */}
+      <FeatureSection
+        subTitle="WordPress"
+        title="WordPress"
+        description1="Template is important for increasing the sales conversion in the website. This is done by creating a good impression on the search engine crawlers. We understand that your website needs to look uncluttered. Our developers have enough experience in handling this. We have WordPress experts, who will work wonders on the website. The site will surely impress the viewers. Geektheory provided you the best cms web design service in India."
+        // description2="Our redesign services refresh your brand and correct past design flaws for   ."
+        features={[
+          "Simplifies Content Publishing, Editing, And Deletion, Boosting Website Efficiency.",
+          "Keeps Content Fresh, Improving Search Engine Rankings.",
+          "Enhances Workflow For Better Business Control Over CMS.",
+          "Enables Easy Indexing And Discovery, Aiding Customer Retention.",
+        ]}
+        image={`${foldername}/wordpress2.webp`}
+        bgImage="/body-bg-2-scaled-1.jpg"
+        bgColor="#f9fafb"
+      />
       {/* Why us*/}
-      <section>
         <ImageTextSectionReversed
           imageSrc={`${foldername}/Geek-logo_webp-e1745647573961.webp`}
           imageAlt="Brand Image"
@@ -742,9 +287,7 @@ const ContentManagementSystem = () => {
           animationClass="translate-y-40" // slide from right
           // extraImgClass="h-[800px]"
         />
-      </section>
       {/* Joomla*/}
-      <section>
         <ImageTextSectionReversed
           imageSrc={`${foldername}/joomla.webp`}
           imageAlt="Brand Image"
@@ -755,82 +298,20 @@ const ContentManagementSystem = () => {
           // extraImgClass="h-[800px]"
           backgroundImage="/body-bg-2-scaled-1.jpg"
         />
-      </section>
-      {/* Swiper */}
-      <section className="w-full py-10 md:py-16 bg-white">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
-          {/* Left Column - Swiper Slider */}
-          <div className="w-full md:w-1/2">
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 20 },
-              }}
-              loop={true}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
-              style={{
-                "--swiper-pagination-color": "#FF0000",
-                "--swiper-pagination-bullet-size": "10px",
-              }}
-              className="!pb-8"
-            >
-              {services.map((service, index) => (
-                <SwiperSlide key={index}>
-                  <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md text-center flex flex-col justify-start">
-                    <div>
-                      <div className="flex justify-start mb-4">
-                        <img
-                          src={service.icon}
-                          alt={service.title}
-                          className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-                        />
-                      </div>
-                      <h4 className="text-lg text-left sm:text-xl font-semibold mb-2">
-                        {service.title}
-                      </h4>
-                      <p className="text-gray-600 text-left text-sm sm:text-base font-medium">
-                        {service.content}
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Right Column - Text */}
-          <div
-            ref={textRef4}
-            className={`${
-              textVisible4
-                ? "translate-x-0 opacity-100"
-                : "translate-x-10 opacity-0"
-            }`}
-          >
-            <ul className="space-y-3">
-              {service.map((feature, index) => (
-                <li
-                  key={index}
-                  className="group flex items-start gap-2 text-gray-800 text-base cursor-pointer transition-all duration-300 hover:text-[#fc2512]"
-                >
-                  <span className="text-black mt-1 transition-colors duration-300 group-hover:text-[#fc2512]">
-                    <FaCheckCircle size={20} />
-                  </span>
-                  <span className="transition-colors text-[20px] duration-300 group-hover:text-black">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/*CMS */}
-      <section className="w-full bg-[#f5f3f0] py-10">
+      {/* Swiper (Compoment) */}
+      <SliderL_TickR
+        features={[
+          "We create scalable, robust Joomla websites for better user engagement.",
+          "Custom component development transforms your site into something exceptional.",
+          "Share your requirements, and our experts will develop your custom site.",
+          "Custom module development helps attract more users to your website.",
+          "Custom module development helps attract more users to your website.",
+          "We build robust applications to enhance your business visibility.",
+        ]}
+        slides={services}
+      />
+      {/* typo3 CMS */}
+      <section className="w-full bg-[#f5f3f0] py-10 md:py-16 md:px-14">
         <div className="container mx-auto flex flex-col lg:flex-row gap-10 px-4">
           {/* Left Column (Text) */}
           <div className="w-full lg:w-1/2" ref={textRef5}>
@@ -944,10 +425,9 @@ const ContentManagementSystem = () => {
           </motion.div>
         </div>
       </section>
-
       {/* DOT NET CMS */}
       <section
-        className="w-full py-16 bg-white"
+        className="w-full py-10 bg-white md:py-16 md:px-14"
         style={{
           backgroundImage: "", // change if needed
           backgroundSize: "cover",
@@ -1051,133 +531,15 @@ const ContentManagementSystem = () => {
           </div>
         </div>
       </section>
-      {/* Kentico CMS */}
-      <section
-        className="w-full py-16 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/body-bg-2-scaled-1.jpg')`, // set background image if needed
-          backgroundColor: "white",
-        }}
-      >
-        <div className="container mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
-          {/* Left: Image */}
-          <div className="flex justify-center">
-            <div
-              ref={imgRef7}
-              className={`transition-transform duration-700 ease-out ${
-                imgVisible7
-                  ? "translate-y-0 translate-x-0 opacity-100"
-                  : "translate-y-20 opacity-25"
-              }`}
-            >
-              <img
-                src={`${foldername}/kentico.webp`} // change if needed
-                alt="Sample Alt"
-                className="rounded-lg w-full max-w-md object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Right: Text */}
-          <div
-            ref={textRef7}
-            className={`transition-all duration-700 ease-out ${
-              textVisible7
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
-          >
-            <div className="text-left space-y-4">
-              <h5
-                className={`flex gap-3 text-[19px] font-extrabold uppercase transition-all duration-700 delay-100 ${
-                  textVisible7
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <TriangleBullet /> <span>Kentico</span>
-              </h5>
-              <h2
-                className={`text-4xl font-bold leading-snug transition-all duration-700 delay-200 ${
-                  textVisible7
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Kentico CMS
-              </h2>
-              <p
-                className={`text-gray-700 leading-relaxed text-base transition-all duration-700 delay-300 ${
-                  textVisible7
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                Content is the king of a website. We strive to offer you with
-                efficient and speedier CMS website design so that you can spend
-                more time on the other aspects of your business rather than
-                adding, editing, or deleting the contents on the sites. The CMS
-                web design we offer facilitate enhanced workflow, higher
-                productivity, and improved workflow.In today’s business
-                landscape, it is important to ensure that the organization is
-                responsive and agile to change the growing IT needs. You can
-                partner with us for empowering the business by adopting reliable
-                and cutting edge IT service. With our dedicated work we being
-                counted in the one of the leading cms web design companies in
-                Chennai.
-              </p>
-              {/* <div
-                className={`${
-                  textVisible7
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <ul className="space-y-3">
-                  {wordpress.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="group flex items-start gap-2 text-gray-800 text-base cursor-pointer transition-all duration-300 hover:text-[#fc2512]"
-                    >
-                      <span className="text-black mt-1 transition-colors duration-300 group-hover:text-[#fc2512]">
-                        <FaCheckCircle size={20} />
-                      </span>
-                      <span className="transition-colors text-[20px] duration-300 group-hover:text-black">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
-                {Kentico.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 group ">
-                    {/* Circle with Star */}
-                    <div
-                      className={`flex items-center justify-center w-12 h-12 rounded-full ${step.color} transition-transform duration-500 ease-out group-hover:scale-125`}
-                    >
-                      <FaRegStar
-                        size={20}
-                        className="transition-transform duration-500 ease-out group-hover:rotate-180"
-                      />
-                    </div>
-
-                    {/* Text */}
-                    <span className="font-bold text-lg leading-tight transition-colors duration-300 group-hover:text-gray-700">
-                      {step.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Button */}
-              {/* <div className="pt-4">
-                <Button title="Get Started" link="#" />
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Kentico CMS (Components) */}
+      <RotatingStarR_ImgL
+        subtitle="Kentico"
+        title="Kentico CMS"
+        description="Content is the king of a website. We strive to offer you with efficient and speedier CMS website design so that you can spend more time on the other aspects of your business rather than adding, editing, or deleting the contents on the sites. The CMS web design we offer facilitate enhanced workflow, higher productivity, and improved workflow.In today’s business landscape, it is important to ensure that the organization is responsive and agile to change the growing IT needs. You can partner with us for empowering the business by adopting reliable and cutting edge IT service. With our dedicated work we being counted in the one of the leading cms web design companies in Chennai."
+        steps={Kentico}
+        imageSrc={`${foldername}/kentico.webp`}
+        bgImage="/body-bg-2-scaled-1.jpg"
+      />
       {/* Animated Section */}
       <section>
         <CTASection
@@ -1191,5 +553,4 @@ const ContentManagementSystem = () => {
     </>
   );
 };
-
 export default ContentManagementSystem;
