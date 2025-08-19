@@ -26,35 +26,35 @@ const PhpWebDevelopment = () => {
   ];
 
   // Development
-  useEffect(() => {
-    const imgObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setImgVisible3(true);
-          imgObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
+  // useEffect(() => {
+  //   const imgObserver = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setImgVisible3(true);
+  //         imgObserver.disconnect();
+  //       }
+  //     },
+  //     { threshold: 0.3 }
+  //   );
 
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTextVisible3(true);
-          textObserver.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
+  //   const textObserver = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setTextVisible3(true);
+  //         textObserver.disconnect();
+  //       }
+  //     },
+  //     { threshold: 0.3 }
+  //   );
 
-    if (imgRef3.current) imgObserver.observe(imgRef3.current);
-    if (textRef3.current) textObserver.observe(textRef3.current);
+  //   if (imgRef3.current) imgObserver.observe(imgRef3.current);
+  //   if (textRef3.current) textObserver.observe(textRef3.current);
 
-    return () => {
-      imgObserver.disconnect();
-      textObserver.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     imgObserver.disconnect();
+  //     textObserver.disconnect();
+  //   };
+  // }, []);
   const dev = [
     {
       img: `${foldername}/easy.webp`,
@@ -213,16 +213,7 @@ const PhpWebDevelopment = () => {
   {
     /** Initialize AOS (Animate On Scroll) library */
   }
-  useEffect(() => {
-    AOS.init({
-      once: true, // animation runs only once
-      duration: 800, // speed of animation
-      easing: "ease-out-cubic",
-    });
-  }, []);
-  useEffect(() => {
-    AOS.init({ duration: 500, once: true, easing: "ease-out" });
-  }, []);
+  
   return (
     <>
       <div

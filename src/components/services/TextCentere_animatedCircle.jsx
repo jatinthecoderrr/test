@@ -1,5 +1,8 @@
 import React from "react";
 import TriangleBullet from "../Home/TriangleBullet";
+import { useState, useRef, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TextCenter_animatedCircle = ({
   bgImage,
@@ -9,6 +12,16 @@ const TextCenter_animatedCircle = ({
   description, // description paragraph
   features = [], // features array [{ img, title, description, animation }]
 }) => {
+  useEffect(() => {
+    AOS.init({
+      once: true, // animation runs only once
+      duration: 800, // speed of animation
+      easing: "ease-out-cubic",
+    });
+  }, []);
+  useEffect(() => {
+    AOS.init({ duration: 500, once: true, easing: "ease-out" });
+  }, []);
   return (
     <section
       className={`w-full bg-center bg-cover bg-no-repeat py-8 px-4 sm:px-6 md:py-14 md:px-8 lg:px-14`}
