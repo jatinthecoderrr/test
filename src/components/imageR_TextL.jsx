@@ -53,7 +53,7 @@ const ImageTextSectionReversed = ({
 
   return (
     <section
-      className={`w-full py-10 px-4 sm:py-12 sm:px-6 md:py-19 md:px-16 ${bgClass}`}
+      className={`w-full py-8 px-4 sm:py-12 sm:px-6 md:py-14 md:px-16 ${bgClass}`}
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`

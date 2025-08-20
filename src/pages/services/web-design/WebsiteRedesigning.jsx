@@ -7,9 +7,10 @@ import { FaCheckCircle } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
 import Accordion from "../../../components/Services/accordion";
 import { MdBuild } from "react-icons/md";
-import FeatureSection from "../../../components/Services/ImageL_TickMarkR"
+import FeatureSection from "../../../components/services/ImageL_TickMarkR"
 import BenefitsSection from '../../../components/Services/HoverTextCards';
 import SectionHeader from "../../../components/Services/Animated_SectionHeader";
+import { Helmet } from "react-helmet";
 
 const Feature = ({ icon, svg, title, text }) => (
   <div className="flex items-start flex-wrap sm:flex-nowrap">

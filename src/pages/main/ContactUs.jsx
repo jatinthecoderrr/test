@@ -7,10 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import Button from '../../components/Button';
 import toast, { Toaster } from "react-hot-toast";
 import SocialMediaHeader from '../../components/SocialMediaHeader';
-
-
-
-
+import { Helmet } from "react-helmet";
 
 function ContactUs() {
         const links = [

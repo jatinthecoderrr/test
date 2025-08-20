@@ -3,13 +3,14 @@ import ImageTextSection from "../../../components/imageL_TextR";
 import ImageTextSectionReversed from "../../../components/imageR_TextL";
 import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
 import FeatureSection from "../../../components/services/ImageL_TickMarkR";
-import RotatingStarL_ImgR from "../../../components/services/RotatingStarL_ImgR";
+import RotatingStarL_ImgR from "../../../components/Services/RotatingStarL_ImgR";
 import RotatingStarR_ImgL from "../../../components/services/RotatingStarR_ImgL";
 import SliderL_TickR from "../../../components/services/AutoSliderL_TickR";
 import { useState, useRef, useEffect } from "react";
 import TriangleBullet from "../../../components/Home/TriangleBullet";
 import { FaCheckCircle, FaRegStar } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
+import { Helmet } from "react-helmet";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 const ContentManagementSystem = () => {

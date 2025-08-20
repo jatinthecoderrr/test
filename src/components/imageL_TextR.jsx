@@ -54,7 +54,7 @@ const ImageTextSection = ({
 
   return (
     <section
-      className="w-full py-6 px-6 sm:py-6 sm:px-6 md:py-16 md:px-15 -cover bg-center bg-no-repeat"
+      className="w-full py-6 px-6 sm:py-6 sm:px-6 md:py-14 md:px-15 -cover bg-center bg-no-repeat"
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : "none",
         backgroundColor: bgImage ? "transparent" : "white",

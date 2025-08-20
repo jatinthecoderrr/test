@@ -6,9 +6,10 @@ import ServicesSlider from "../../../components/Services/SlidingCards_Navigation
 import MissionVision from "../../../components/Services/TextL_AutoSliderR"
 import ImageTextSection from "../../../components/imageL_TextR"
 import SectionHeader from "../../../components/Services/Animated_SectionHeader"
-import Accordion from "../../../components/Services/Accordion"
+import Accordion from "../../../components/Services/accordion"
 import CTASection from "../../../components/Animatedbox"
 import TextCenter_animatedCircle from "../../../components/Services/TextCentere_animatedCircle"
+import { Helmet } from "react-helmet";
 
 const MagentoDevelopment = () => {
   const foldername = "Magento Development"

@@ -160,7 +160,7 @@ function FeatureSectionRev({
               <img
                 src={image}
                 alt={title}
-                className="w-full h-90 md:h-[400px] object-contain rounded-3xl"
+                className="w-full h-90 md:h-[400px] rounded-3xl"
               />
             )}
           </div>

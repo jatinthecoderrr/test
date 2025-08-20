@@ -92,7 +92,7 @@ const PremiumECommerce = () => {
         />
       </section>
 
-
+        {/* Ecommerce Verticals You Can Choose*/}
       <section
          className=" bg-cover bg-center bg-no-repeat py-5 sm:py-8 md:py-14 px-4 sm:8 md:px-10"
         style={{ backgroundImage: `url('/t2-bg-img-1.webp')` }}
@@ -123,7 +123,7 @@ const PremiumECommerce = () => {
           <CategoriesGrid categories={categories} />
       </section>
 
-      { /* Requires reak time*/}
+      { /* Requires real time*/}
       <section className="w-full z-10">
         <FeatureGridSection
           subTitle="Ecommerce"

@@ -48,6 +48,8 @@ function ServicesSection({
           subTitle={subTitle}
           titleWords={titleWords}
           description={description}
+          text_align="md:text-center"
+          justify= "justify-center"
         />
 
         {/* Services Grid */}
@@ -118,12 +120,12 @@ export default ServicesSection;
 
 // function HomePage() {
 //   return (
-//     <ServicesSection
-//       subTitle="What We Do"
-//       titleWords={["Our", "Creative", "Solutions"]}
-//       description="We help businesses grow with technology-driven services."
-//       services={myServices}
-//       columns={{ sm: 1, md: 2, lg: 4 }}
-//     />
+    // <ServicesSection
+    //   subTitle="What We Do"
+    //   titleWords={["Our", "Creative", "Solutions"]}
+    //   description="We help businesses grow with technology-driven services."
+    //   services={myServices}
+    //   columns={{ sm: 1, md: 2, lg: 4 }}
+    // />
 //   );
 // }

@@ -3,9 +3,9 @@ import SocialMediaHeader from "../../../components/SocialMediaHeader";
 import ImageTextSection from "../../../components/imageL_TextR";
 import ImageTextSectionReversed from "../../../components/imageR_TextL";
 import Timeline from "../../../components/Services/Boost-Sales-Growth";
-import FeatureSection from "../../../components/Services/ImageL_TickMarkR"
+import FeatureSection from "../../../components/services/ImageL_TickMarkR"
 import CTASection from "../../../components/Animatedbox";
-
+import { Helmet } from "react-helmet";
 const ResponsiveWebDesign = () => {
   const foldername = "Responsive Web Design – Geektheory – Website Development And Software Development Company - 8_15_2025 6-33-18 PM"
   return (

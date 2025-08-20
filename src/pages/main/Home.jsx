@@ -8,6 +8,7 @@ import Aboutus from '../../components/Home/Aboutus'
 import FAQ from '../../components/Home/FAQ'
 import PortfolioCarousel from '../../components/Home/OurPortfolio'
 import ContactSection from '../../components/Home/ContactSection'
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (

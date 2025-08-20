@@ -3,14 +3,16 @@ import ImageTextSection from "../../../components/imageL_TextR";
 import { useState, useRef, useEffect } from "react";
 import TriangleBullet from "../../../components/Home/TriangleBullet";
 import CTASection from "../../../components/Animatedbox";
-import AOS from "aos";
+import SocialMediaHeader from "../../../components/SocialMediaHeader"
 import "aos/dist/aos.css";
 import Accordion from "../../../components/Home/Accordion";
-import AnimatedSection from "../../../components/services/TextL_IconEffectR";
-import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
-import RotatingStarL_ImgR from "../../../components/services/RotatingStarL_ImgR";
-import ServicesSection from "../../../components/services/TextCenter_animatedLED";
-import TextCenter_animatedCircle from "../../../components/services/TextCentere_animatedCircle";
+import AnimatedSection from "../../../components/Services/TextL_IconEffectR";
+import FeatureSectionRev from "../../../components/Services/ImageR_TickMarkL";
+import RotatingStarL_ImgR from "../../../components/Services/RotatingStarL_ImgR";
+import ServicesSection from "../../../components/Services/TextCenter_animatedLED";
+import TextCenter_animatedCircle from "../../../components/Services/TextCentere_animatedCircle";
+import { Helmet } from "react-helmet";
+
 const PhpWebDevelopment = () => {
   const foldername = "/PHP";
   // codeigniter
@@ -26,35 +28,35 @@ const PhpWebDevelopment = () => {
   ];
 
   // Development
-  // useEffect(() => {
-  //   const imgObserver = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setImgVisible3(true);
-  //         imgObserver.disconnect();
-  //       }
-  //     },
-  //     { threshold: 0.3 }
-  //   );
+  useEffect(() => {
+    const imgObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setImgVisible3(true);
+          imgObserver.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
 
-  //   const textObserver = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setTextVisible3(true);
-  //         textObserver.disconnect();
-  //       }
-  //     },
-  //     { threshold: 0.3 }
-  //   );
+    const textObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTextVisible3(true);
+          textObserver.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
 
-  //   if (imgRef3.current) imgObserver.observe(imgRef3.current);
-  //   if (textRef3.current) textObserver.observe(textRef3.current);
+    if (imgRef3.current) imgObserver.observe(imgRef3.current);
+    if (textRef3.current) textObserver.observe(textRef3.current);
 
-  //   return () => {
-  //     imgObserver.disconnect();
-  //     textObserver.disconnect();
-  //   };
-  // }, []);
+    return () => {
+      imgObserver.disconnect();
+      textObserver.disconnect();
+    };
+  }, []);
   const dev = [
     {
       img: `${foldername}/easy.webp`,
@@ -216,16 +218,18 @@ const PhpWebDevelopment = () => {
   
   return (
     <>
-      <div
-        className="relative bg-cover bg-center bg-no-repeat py-24 md:py-32 lg:py-40"
+     <div
+        className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"
         style={{
-          backgroundImage: "url('/page_bread.webp')",
+          backgroundImage:
+            "url('/page_bread.webp')",
         }}
       >
+        <SocialMediaHeader />
         <div className="absolute inset-0"></div> {/* breadcrumb overlay */}
         <div className="relative container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-black font-extrabold text-4xl md:text-6xl lg:text-7xl mb-0">
+            <h1 className="text-black font-extrabold pt-12 text-4xl md:text-6xl lg:text-7xl mb-0 md:pt-28">
               Php Web Development
             </h1>
           </div>
@@ -247,7 +251,7 @@ const PhpWebDevelopment = () => {
       />
       {/* PHP Development */}
       <TextCenter_animatedCircle
-        bgImage="PHP/s2-bg-img-1.webp"
+        bgImage="/s2-bg-img-1.webp"
         subtitle="Development"
         title="PHP Web Development"
         description="Geektheory is a leading PHP web development company in Chennai,

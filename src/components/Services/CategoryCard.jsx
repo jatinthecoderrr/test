@@ -1,49 +1,4 @@
-// import React from "react";
-
-// // Category Card Component
-// const CategoryCard = ({ title, iconSrc }) => {
-//   return (
-//     <div className="bg-[#282828]/90 rounded-2xl shadow-md p-6 flex flex-col items-center justify-center text-center text-white font-medium transition-transform duration-300 hover:scale-105 aspect-square w-full max-w-[180px]">
-//       <img
-//         src={iconSrc}
-//         alt={title}
-//         className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 mb-3 object-contain"
-//       />
-//       <h3 className="text-sm sm:text-base lg:text-lg">{title}</h3>
-//     </div>
-//   );
-// };
-
-// // Categories Grid with Background Image
-// const CategoriesGrid = ({ categories, foldername }) => {
-//   return (
-//     <section
-//       className="relative w-full min-h-screen flex items-center justify-center px-6 py-10 sm:px-10"
-//     >
-//       {/* Background image */}
-//       <div
-//         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-//         style={{ backgroundImage: `url('/t2-bg-img-1.webp')` }}
-//       />
-
-//       {/* Optional dark overlay for better readability */}
-//       <div className="absolute inset-0 bg-black/50" />
-
-//       {/* Content */}
-//       <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
-//         {categories.map((cat, idx) => (
-//           <CategoryCard key={idx} title={cat.title} iconSrc={cat.iconSrc} />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CategoriesGrid;
-
-
 import React from "react";
-
 // Category Card
 const CategoryCard = ({ title, iconSrc }) => {
   return (
@@ -78,3 +33,27 @@ const CategoriesGrid = ({ categories, foldername }) => {
 };
 
 export default CategoriesGrid;
+
+//how to use 
+// import CategoriesGrid
+
+// const categories = [
+//   { title: "Grocery", iconSrc: `${foldername}/grocery.webp` },
+//   { title: "Mobile", iconSrc: `${foldername}/custom-business-solution.webp` },
+//   { title: "Jewellery", iconSrc: `${foldername}/jwellery.webp` },
+//   { title: "Pet Goods", iconSrc: `${foldername}/pet_goods.webp` },
+//   { title: "Flowers And Plants", iconSrc: `${foldername}/flower.webp` },
+//   { title: "Cosmetics", iconSrc: `${foldername}/cosmetics.webp` },
+//   { title: "Computing", iconSrc: `${foldername}/web-design.webp` },
+//   { title: "Clothing", iconSrc: `${foldername}/clothing.webp` },
+//   { title: "Household", iconSrc: `${foldername}/lease_paymet.webp` },
+//   { title: "Glasses", iconSrc: `${foldername}/glasses-1.webp` },
+//   { title: "Gift Items", iconSrc: `${foldername}/gift.webp` },
+//   { title: "Footwear", iconSrc: `${foldername}/footwear.webp` },
+//   { title: "Chemicals", iconSrc: `${foldername}/chemicles.webp` },
+//   { title: "Books", iconSrc: `${foldername}/books.webp` },
+//   { title: "Bike And Car", iconSrc: `${foldername}/bike.webp` },
+//   { title: "B2B Equipments", iconSrc: `${foldername}/b2b.webp` },
+// ];
+
+// <CategoriesGrid categories={categories} />

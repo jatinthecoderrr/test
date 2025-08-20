@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
 import FeatureSection from "../../../components/services/ImageL_TickMarkR";
 import CTASection from "../../../components/Animatedbox";
+import { Helmet } from "react-helmet";
 const Html5WebDesign = () => {
   const foldername = "/HTML5";
   return (

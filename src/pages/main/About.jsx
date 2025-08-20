@@ -17,7 +17,7 @@ import ImageTextSection from "../../components/imageL_TextR";
 import ImageTextSectionReversed from "../../components/imageR_TextL";
 import ScrollingTechStackMultipleRows from "../../components/About/OurClients"; // Assuming you have a ScrollingTechStackMultipleRows component
 import SocialMediaHeader from "../../components/SocialMediaHeader"; // Assuming you have a SocialMediaHeader component
-
+import { Helmet } from "react-helmet";
 const About = () => {
   const services = [
     {
@@ -181,6 +181,10 @@ const About = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>About Us | Geektheory  - Website Development And Software Development</title>
+        <meta name="description" content="This is the about page description" />
+      </Helmet>
 
       <div
         className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"

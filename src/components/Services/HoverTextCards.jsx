@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "../Services/Animated_SectionHeader";
+import SectionHeader from "./Animated_SectionHeader";
 
 /**
  * Reusable Benefits Section

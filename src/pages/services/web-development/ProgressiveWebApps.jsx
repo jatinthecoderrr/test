@@ -5,15 +5,15 @@ import TriangleBullet from "../../../components/Home/TriangleBullet";
 import { FaCheckCircle, FaArrowRight, FaRegStar } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
 import Button from "../../../components/Button";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import FeatureSection from "../../../components/services/ImageR_TickMarkL";
-import TextR_AutoSliderL from "../../../components/services/textR_AutoSliderL";
-import BenefitsSection from "../../../components/services/HoverTextCards";
-import ServicesSection from "../../../components/services/CenterText_ReadMore";
+import TextR_AutoSliderL from "../../../components/Services/textR_AutoSliderL";
+import BenefitsSection from "../../../components/Services/HoverTextCards";
+import ServicesSection from "../../../components/Services/CenterText_ReadMore";
+import { Helmet } from "react-helmet";
+
 const ProgressiveWebApps = () => {
   const foldername = "/Progressive_Web_Apps";
   const myServices = [
