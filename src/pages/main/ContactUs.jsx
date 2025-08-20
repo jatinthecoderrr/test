@@ -109,7 +109,12 @@ function ContactUs() {
         };
 
         return (
+                
                 <section className=" bg-[url('../../contact-bg.png')] bg-cover bg-center ">
+                         <Helmet>
+                                <title>Contact Us | Geektheory - Website Development And Software Development Company - Make &lt;IT&gt; Different</title>
+                                <meta name="description" content="This is the about page description" />
+                              </Helmet>
                         <Toaster />
                         <SocialMediaHeader />
                         <div className='md:max-w-[880px] flex items-center justify-center mx-auto px-4 pt-24'>

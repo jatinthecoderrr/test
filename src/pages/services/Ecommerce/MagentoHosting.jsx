@@ -7,7 +7,7 @@ import ImageTextSection from "../../../components/imageL_TextR"
 import CTASection from "../../../components/Animatedbox"
 import TriangleBullet from "../../../components/Home/TriangleBullet"
 import Categoriesinside from "../../../components/Services/cardAnimation_Inside"
-
+import { Helmet } from "react-helmet";
 const MagentoHosting = () => {
   const foldername = "Magento Hosting";
   const title = "Check out Magento Web Hosts"

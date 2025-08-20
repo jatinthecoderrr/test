@@ -26,8 +26,8 @@ const ImageTextSection = ({
     const imgObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setImgVisible(true);
-          imgObserver.disconnect();
+          (true);
+          imgObserver.disconnsetImgVisibleect();
         }
       },
       { threshold: 0.3 }

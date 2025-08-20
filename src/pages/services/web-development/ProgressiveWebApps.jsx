@@ -1,8 +1,6 @@
 import React from "react";
-import ImageTextSection from "../../../components/imageL_TextR";
 import { useState, useRef, useEffect } from "react";
 import TriangleBullet from "../../../components/Home/TriangleBullet";
-import { FaCheckCircle, FaArrowRight, FaRegStar } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
 import Button from "../../../components/Button";
 import "swiper/css";
@@ -13,9 +11,18 @@ import TextR_AutoSliderL from "../../../components/Services/textR_AutoSliderL";
 import BenefitsSection from "../../../components/Services/HoverTextCards";
 import ServicesSection from "../../../components/Services/CenterText_ReadMore";
 import { Helmet } from "react-helmet";
+import Categoriesinside from "../../../components/Services/cardAnimation_Inside"
 
 const ProgressiveWebApps = () => {
-  const foldername = "/Progressive_Web_Apps";
+  const foldername = "/Progressive Web Apps";
+  const title ="Progressive Web Apps Success Stories"
+  const categories = [
+    { title: "Pinterest", iconSrc: `${foldername}/pinterest.webp`, paragraph: "Pinterest runs faster and smoother when content is relevant, especially on mobile. Most users access it via mobile devices using AMP (Accelerated Mobile Pages), which load 4x faster and use 8x less data, according to engineer Jon Parise.", animation: "fade-right" },
+
+    { title: "Aliexpress", iconSrc: `${foldername}/aliexpress.webp`, paragraph: "To offer offline access, better performance, and user re-engagement, AliExpress adopted a Progressive Web App. The result: a 45% increase in overall conversions and a 104% boost for new users—proving the strategy’s success.", animation: "fade-left" },
+
+  ];
+
   const myServices = [
     {
       title: "Services Workers",
@@ -44,7 +51,7 @@ const ProgressiveWebApps = () => {
       title: "Progressive",
       description:
         "Progressive Web Apps combine web and app features for seamless, efficient user experiences.",
-      img: `${foldername}/pwa.webp`,
+      img: `${foldername}/pwa (1).webp`,
       hoverColor: "group-hover:text-[#ff0000]",
     },
     {
@@ -166,6 +173,10 @@ const ProgressiveWebApps = () => {
   }, []);
   return (
     <>
+    <Helmet>
+                <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+                <meta name="description" content="This is the about page description" />
+              </Helmet>
       <div
         className="relative bg-cover bg-center bg-no-repeat py-24 md:py-32 lg:py-40"
         style={{
@@ -315,6 +326,46 @@ const ProgressiveWebApps = () => {
         paragraph="Geektheory creates visually appealing corporate websites, consulting with clients to understand their needs, ensuring innovation, and delivering the best design service."
         features={iconBoxes}
       />
+
+       {/* Progressive Web Apps Success Storiess */}
+      <section
+        className=" bg-cover bg-center bg-no-repeat py-5 sm:py-8 md:py-14 px-4 sm:8 md:px-10"
+        style={{ backgroundColor: "#f5f3ef" }}
+      >
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="uppercase flex gap-3 text-sm sm:text-[17px] font-white text-gray-600 items-center tracking-wider">
+            <TriangleBullet /> <span className='text-gray-600 font-bold'>Success</span>
+          </div>
+        </div>
+
+        {/* Split-letter Title */}
+        <h2 className="text-5xl sm:text-4xl md:text-5xl font-extrabold text-center text-black flex justify-center flex-wrap leading-snug">
+          {title.split("").map((char, i) => (
+            <span
+              key={i}
+              className="split-letter"
+              style={{ animationDelay: `${i * 0.05}s` }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </h2>
+        <p className="max-w-7xl mx-auto text-center text-gray-600 font-medium  text-base sm:text-lg md:text-[18px] mb-10 leading-relaxed px-2">
+         Every day several websites are being developed. However, a majority of them do not meet the pre-eminence of what the clients are looking for. We make it a point to cater to some typical methodologies to offer you with excellent solutions. Geektheory, is a well-known contributor of the best progressive web apps development companies in Chennai. We aim for on-time delivery of the customer’s project. Throughout the process of website development we follow certain refined methodologies. We ensure the quality of the solution before delivering it to our client. We provide amazing solutions and make your business and organization stand out from others.
+        </p>
+        <Categoriesinside categories={categories} />
+      </section>
+
+       {/* Animated Section */}
+      <section>
+        <CTASection
+          subtitle="CONTACT US"
+          title="Ready To Experience Upstage Yourself?"
+          buttonText="Let's get started"
+          buttonLink="https://geektheo.com/about/"
+          backgroundImage="/bg.webp"
+        />
+      </section>
     </>
   );
 };

@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import CTASection from "../../../components/Animatedbox";
 import Accordion from "../../../components/Services/accordion";
 import { MdBuild } from "react-icons/md";
-import FeatureSection from "../../../components/services/ImageL_TickMarkR"
+import FeatureSection from "../../../components/Services/ImageL_TickMarkR"
 import BenefitsSection from '../../../components/Services/HoverTextCards';
 import SectionHeader from "../../../components/Services/Animated_SectionHeader";
 import { Helmet } from "react-helmet";
@@ -186,6 +186,10 @@ const WebsiteRedesigning = () => {
 
   return (
     <>
+    <Helmet>
+            <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+            <meta name="description" content="This is the about page description" />
+          </Helmet>
       <div
         className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"
         style={{

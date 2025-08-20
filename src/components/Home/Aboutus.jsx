@@ -23,7 +23,8 @@ const Aboutus = () => {
 
     return () => {
       if (logoRef.current) {
-        observer.unobserve(logoRef.current);
+             observer.disconnect();
+
       }
     };
   }, []);
@@ -55,7 +56,7 @@ const Aboutus = () => {
             }}
           >
             <img
-              src="https://geektheory.tofutrips.com/wp-content/uploads/2025/01/cropped-geeklogo-1.png"
+              src="/GeekTheoryIcon.png"
               alt="Geektheory Logo"
               className="w-full h-auto"
             />

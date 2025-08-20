@@ -75,6 +75,10 @@ const AffordableWebDesign = () => {
   ];
   return (
     <>
+    <Helmet>
+        <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+        <meta name="description" content="This is the about page description" />
+      </Helmet>
       <div
         className="relative bg-cover bg-center bg-no-repeat py-24 md:py-32 lg:py-40"
         style={{

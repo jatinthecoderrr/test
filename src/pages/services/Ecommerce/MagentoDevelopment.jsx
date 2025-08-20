@@ -224,6 +224,7 @@ const MagentoDevelopment = () => {
 
   return (
     <>
+    
       <div
         className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"
         style={{

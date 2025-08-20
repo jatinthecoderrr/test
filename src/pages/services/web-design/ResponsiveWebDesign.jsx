@@ -10,6 +10,10 @@ const ResponsiveWebDesign = () => {
   const foldername = "Responsive Web Design – Geektheory – Website Development And Software Development Company - 8_15_2025 6-33-18 PM"
   return (
     <>
+    <Helmet>
+            <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+            <meta name="description" content="This is the about page description" />
+          </Helmet>
       <div
         className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"
         style={{

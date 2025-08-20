@@ -144,7 +144,7 @@ const Categoriesinside = ({ categories }) => {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center px-6 pb-5">
+        <section className="relative w-full flex items-center justify-center px-6 pb-5">
             {/* Grid */}
             <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 w-full max-w-6xl">
                 {categories.map((cat, idx) => (

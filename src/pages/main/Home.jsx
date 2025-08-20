@@ -13,18 +13,23 @@ import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <>
-    <HeroSection/>
-          
-          <OurServices/>
-          <Timeline />
-          <Aboutus/>
-          <PortfolioCarousel />
-          <TrustedPartnership/>
-          <ClientExperience/>
-          <FAQ />
-          <ContactSection />
-          
-          
+      <Helmet>
+        <title>Geektheory - Website Development And Software Development Company - Make &lt;IT&gt; Different</title>
+        <meta name="description" content="This is the about pages" />
+      </Helmet>
+
+      <HeroSection />
+
+      <OurServices />
+      <Timeline />
+      <Aboutus />
+      <PortfolioCarousel />
+      <TrustedPartnership />
+      <ClientExperience />
+      <FAQ />
+      <ContactSection />
+
+
     </>
   )
 }

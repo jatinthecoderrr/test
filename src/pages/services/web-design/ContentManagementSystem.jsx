@@ -2,7 +2,7 @@ import React from "react";
 import ImageTextSection from "../../../components/imageL_TextR";
 import ImageTextSectionReversed from "../../../components/imageR_TextL";
 import FeatureSectionRev from "../../../components/services/ImageR_TickMarkL";
-import FeatureSection from "../../../components/services/ImageL_TickMarkR";
+import FeatureSection from "../../../components/Services/ImageL_TickMarkR";
 import RotatingStarL_ImgR from "../../../components/Services/RotatingStarL_ImgR";
 import RotatingStarR_ImgL from "../../../components/services/RotatingStarR_ImgL";
 import SliderL_TickR from "../../../components/services/AutoSliderL_TickR";
@@ -208,6 +208,10 @@ const ContentManagementSystem = () => {
 
   return (
     <>
+    <Helmet>
+            <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+            <meta name="description" content="This is the about page description" />
+          </Helmet>
       <div
         className="relative bg-cover bg-center bg-no-repeat py-24 md:py-32 lg:py-40"
         style={{

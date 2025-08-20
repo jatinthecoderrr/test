@@ -41,8 +41,8 @@ function ServicesSection({
   }
 
   return (
-    <div className="w-full bg-[#c8aeff1f]">
-      <div className="max-w-7xl mx-auto py-14">
+    <div className="w-full py-8 px-8 md:py-10 md:px-12 ">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <SectionHeader
           subTitle={subTitle}
@@ -88,10 +88,14 @@ function ServicesSection({
                   <FaArrowCircleRight className="text-black bg-white rounded-full text-2xl" />
                 </span>
               </a>
+              
             </div>
           ))}
         </div>
       </div>
+          <hr className="border-t border-gray-300" />
+
+
     </div>
   );
 }
@@ -122,7 +126,7 @@ export default ServicesSection;
 //   return (
     // <ServicesSection
     //   subTitle="What We Do"
-    //   titleWords={["Our", "Creative", "Solutions"]}
+    //   titleWords="Real Time Web Applications Development"
     //   description="We help businesses grow with technology-driven services."
     //   services={myServices}
     //   columns={{ sm: 1, md: 2, lg: 4 }}

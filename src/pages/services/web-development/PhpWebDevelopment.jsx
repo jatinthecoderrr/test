@@ -7,7 +7,7 @@ import SocialMediaHeader from "../../../components/SocialMediaHeader"
 import "aos/dist/aos.css";
 import Accordion from "../../../components/Home/Accordion";
 import AnimatedSection from "../../../components/Services/TextL_IconEffectR";
-import FeatureSectionRev from "../../../components/Services/ImageR_TickMarkL";
+import FeatureSectionRev from "../../../components/services/ImageL_TickMarkR";
 import RotatingStarL_ImgR from "../../../components/Services/RotatingStarL_ImgR";
 import ServicesSection from "../../../components/Services/TextCenter_animatedLED";
 import TextCenter_animatedCircle from "../../../components/Services/TextCentere_animatedCircle";
@@ -218,6 +218,10 @@ const PhpWebDevelopment = () => {
   
   return (
     <>
+    <Helmet>
+            <title>Affordable Web Design | Geektheory - Website Development And Software Development Company - Make &lt;IT &gt; Different</title>
+            <meta name="description" content="This is the about page description" />
+          </Helmet>
      <div
         className="relative bg-cover bg-center bg-no-repeat pb-24 md:pb-32 lg:pb-40"
         style={{
